@@ -55,7 +55,6 @@ public class WeatherActivity extends AppCompatActivity {
         @Override
         public void handleMessage(Message msg) {
             if (msg.what == 1) {
-                Log.d(TAG, msg.obj.toString());
                 try {
                     JSONObject result = new JSONObject(msg.obj.toString());
                     JSONObject today = result.getJSONObject("retData").getJSONObject("today");

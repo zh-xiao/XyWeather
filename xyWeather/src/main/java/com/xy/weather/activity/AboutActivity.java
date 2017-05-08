@@ -10,14 +10,15 @@ import com.xy.weather.utils.Utils;
 import com.xy.xyweather.R;
 
 public class AboutActivity extends AppCompatActivity {
-private TextView version;
+    private TextView version;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
-        version=(TextView)findViewById(R.id.version);
+        version = (TextView) findViewById(R.id.version);
         version.setText(Utils.getAppVersionName(this));
-        Toolbar toolbar= (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setNavigationIcon(R.drawable.title_bar_back);
         setSupportActionBar(toolbar);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
